@@ -57,15 +57,9 @@ class Server:
 
         _page_size = len(data)
 
-        if (p := page + 1) >= total_pages:
-            next_page = None
-        else:
-            next_page = p
+        next_page = None if page + 1 >= total_pages else page + 1
 
-        if (p := page - 1) <= 0:
-            prev_page = None
-        else:
-            prev_page = p
+        prev_page = None if page - 1 <=0 else page - 1
 
         return {
             'page_size': _page_size,
