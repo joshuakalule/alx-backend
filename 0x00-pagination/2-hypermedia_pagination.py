@@ -5,8 +5,11 @@ Task 2. Hypermedia pagination
 
 import csv
 import math
-from typing import List, Optional, Tuple, TypedDict
-
+from typing import List, Optional, Tuple
+try:
+    from typing import TypedDict
+except ImportError:
+    from typing_extensions import TypedDict
 
 class PageType(TypedDict):
     """Custom type for response"""
@@ -59,7 +62,7 @@ class Server:
 
         next_page = None if page + 1 >= total_pages else page + 1
 
-        prev_page = None if page - 1 <=0 else page - 1
+        prev_page = None if page - 1 <= 0 else page - 1
 
         return {
             'page_size': _page_size,
