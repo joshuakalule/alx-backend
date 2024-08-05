@@ -11,6 +11,7 @@ try:
 except ImportError:
     from typing_extensions import TypedDict
 
+
 class PageType(TypedDict):
     """Custom type for response"""
     page_size: int
