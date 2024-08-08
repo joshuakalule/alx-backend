@@ -12,7 +12,6 @@ class LRUCache(BaseCaching):
 
     def __init__(self):
         super().__init__()
-        # (key, age_bit)
         self.lru_list = []
 
     def put(self, key: str, item: str) -> None:
