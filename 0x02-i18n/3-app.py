@@ -2,7 +2,7 @@
 """Task 3. Parametrize templates"""
 
 from flask import Flask, render_template, request
-from flask_babel import Babel, _  # type: ignore
+from flask_babel import Babel  # type: ignore
 
 app = Flask(__name__)
 
