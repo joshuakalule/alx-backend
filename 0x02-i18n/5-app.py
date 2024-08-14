@@ -57,8 +57,7 @@ def get_locale():
 @app.route('/')
 def default_route():
     """Default route, Hello world"""
-    if g.user:
-        username = g.user['name']
+    username = g.user['name'] if g.user else None
     return render_template('5-index.html', username=username)
 
 
