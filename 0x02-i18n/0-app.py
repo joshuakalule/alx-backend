@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def default_route():
-    """Default route, hello world"""
+    """Default route, Hello world"""
     return render_template('0-index.html')
 
 
